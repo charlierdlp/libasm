@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-extern size_t ft_strlen(char *str);
-extern char *ft_strcpy(char *dst, char *src);
-extern int ft_strcmp(char *s1, char *s2);
-extern char *ft_strdup(char *str);
+#include "libasm.h"
 
 int main()
 {
@@ -29,10 +23,10 @@ printf("Original:[%d]\n", strcmp(str1, str2));
 printf("Ft:[%d]\n", ft_strcmp(str1, str2));
 	*/
 
-	char str1[10] = "hola";
-	char str2[10] = "hola";
+	char str1[10] = "";
+	char str2[10] = "";
 	
 	printf("Original:[%s]\n", strdup(str1));
-	printf("Ft:[%s]\n", ft_strdup(str2));
+	printf("Ft:[%s]\n", ft_strdup2(str2));
 	return(0);
 }

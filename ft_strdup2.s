@@ -1,0 +1,24 @@
+section .text
+	extern _malloc
+    extern ___error
+	extern _ft_strlen
+	extern _ft_strcpy
+    global _ft_strdup2
+
+_ft_strdup2:
+    cmp byte[rdi], 0 
+	jz _error
+    push rdi
+    call _ft_strlen
+    mov rdi, rax
+    call _malloc
+    ;cmp byte[rax], 0
+    ;call ___error
+    mov rdi, rax
+    pop rsi
+    call _ft_strcpy
+    ret
+
+_error:
+	mov rax, rdi
+	ret
