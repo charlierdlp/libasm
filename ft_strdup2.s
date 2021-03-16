@@ -12,8 +12,6 @@ _ft_strdup2:
     call _ft_strlen
     mov rdi, rax
     call _malloc
-    ;cmp byte[rax], 0
-    ;call ___error
     mov rdi, rax
     pop rsi
     call _ft_strcpy

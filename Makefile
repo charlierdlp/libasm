@@ -6,11 +6,11 @@
 #    By: cruiz-de <cruiz-de@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/18 12:35:57 by cruiz-de          #+#    #+#              #
-#    Updated: 2021/03/15 19:13:42 by cruiz-de         ###   ########.fr        #
+#    Updated: 2021/03/16 20:38:38 by cruiz-de         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_strdup.s ft_strdup2.s
+SRCS		=	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_strdup.s ft_strdup2.s ft_write.s ft_read.s
 OBJS		=	$(SRCS:.s=.o)
 
 NA			=	nasm
