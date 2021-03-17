@@ -3,26 +3,30 @@ section .text
 
 _ft_strcmp:
     movzx rax, BYTE[rdi]
-    movzx rbx, BYTE[rsi]
+    movzx rcx, BYTE[rsi]
     cmp rax, 0
     jz _exit
-    cmp rbx, 0
+    cmp rcx, 0
     jz _exit
 
 
 _while:
-    cmp rax, rbx
+    cmp rax, rcx
     jne _exit
+    cmp rax, 0
+    jz _exit
+    cmp rcx, 0
+    jz _exit
     inc rdi
     inc rsi
     movzx rax, BYTE[rdi]
-    movzx rbx, BYTE[rsi]
-    cmp rax, rbx
+    movzx rcx, BYTE[rsi]
+    cmp rax, rcx
     jne _exit
     jmp _while 
 
 _exit:
-    sub rax, rbx
+    sub rax, rcx
     ret
 
 

@@ -78,7 +78,7 @@ void	check_ft_strcmp()
 	printf("%-20s: \"%d\"\n", "libc", strcmp(empty, s1));	
 	printf("%-20s: \"%d\"\n", "libasm", ft_strcmp(empty, s1));
 }
-/*
+
 void	check_ft_read()
 {
 	char	buffer[900];
@@ -177,7 +177,7 @@ void	check_ft_write()
 	close(fd);	
 	printf("\n");
 }
-*/
+
 void	check_ft_strdup()
 {
 	char *hello_world = "Hello world !";
@@ -212,9 +212,9 @@ int		main(void)
 {
 	check_ft_strlen();
 	check_ft_strcpy();
-	//check_ft_strcmp();
-	//check_ft_read();
-	//check_ft_write();
+	check_ft_strcmp();
+	check_ft_read();
+	check_ft_write();
 	check_ft_strdup();
 	return (0);
 }

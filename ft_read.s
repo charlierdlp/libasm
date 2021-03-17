@@ -1,8 +1,8 @@
 section .text
     extern ___error
-    global _ft_write
+    global _ft_read
 
-_ft_write:
+_ft_read:
     mov rax, 0x2000003
     syscall             ; pone en rax errno
     jc _check_error
