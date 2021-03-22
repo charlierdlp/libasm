@@ -15,8 +15,8 @@ int main()
   // printf("charlie:%lu\n", ft_strlen("ho       la"));
   // printf("ordenador:%lu\n", strlen("ho       la"));
 */
-	char *str1 = "q";
-	char *str2 = "q";
+	char *str1 = "\xff\xff";
+	char *str2 = "\xff";
 
 
 printf("Original:[%d]\n", strcmp(str1, str2));
