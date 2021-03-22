@@ -192,7 +192,7 @@ void	check_ft_strdup()
 	printf("%-20s: \"%s\"\n", "libc", save);
 	free(save);
 	save = NULL;
-	save2 = ft_strdup2(hello_world);
+	save2 = ft_strdup(hello_world);
 	printf("%-20s: \"%s\"\n", "libasm", save2);
 	free(save2);
 	save2 = NULL;
@@ -202,7 +202,7 @@ void	check_ft_strdup()
 	printf("%-20s: \"%s\"\n", "libc", save);
 	free(save);
 	save = NULL;
-	save2 = ft_strdup2(empty);
+	save2 = ft_strdup(empty);
 	printf("%-20s: \"%s\"\n", "libasm", save2);
 	free(save2);
 	save2 = NULL;

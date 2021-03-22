@@ -3,9 +3,9 @@ section .text
     extern ___error
 	extern _ft_strlen
 	extern _ft_strcpy
-    global _ft_strdup2
+    global _ft_strdup
 
-_ft_strdup2:
+_ft_strdup:
     ;cmp byte[rdi], 0 
 	;jz _error
     push rdi
