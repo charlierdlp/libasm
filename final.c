@@ -76,31 +76,34 @@ void	test_ft_write()
 
 void	test_ft_read()
 {
-	char *text = "Hello world!";
-	int bytes;
-	int fd;
+	char buffer[100];
 
-	fd = open("text", O_WRONLY | O_APPEND | O_CREAT, 0700);
 	printf("\n\033[0;37m*============================*\n");
 	printf("*==========>");
 	printf("\033[0;32m READ \033[0;37m");
 	printf("<==========*\n");
 	printf("*============================*\033[0m\n\n");
 	printf("------------------------------\n");
-	printf("Original: %zd\n", read(fd, text, strlen(text)));
-	close(fd);
+	read(1, buffer, 100);
+	printf("\nOriginal: %s\n", buffer);
+	ft_read(1, buffer, 100);
+	printf("\nFT: %s\n", buffer);
 }
 
 void	test_ft_strdup()
 {
+	char *s1 = "Test1";
+	char *s2 = "Test2";
+
 	printf("\n\033[0;37m*============================*\n");
 	printf("*=========>");
 	printf("\033[0;32m STRDUP \033[0;37m");
 	printf("<=========*\n");
 	printf("*============================*\033[0m\n\n");
-	printf("------------------------------\n");
-	printf("Original: %s\n", strdup("testingxxx"));
-	printf("FT: %s\n", ft_strdup("testingxxx"));
+	printf("Original: %s\n", strdup(s1));
+	printf("FT: %s\n", ft_strdup(s2));
+	free(s1);
+	free(s2);
 	printf("------------------------------\n");
 
 }
@@ -110,7 +113,7 @@ int main()
 	test_ft_strlen();
 	test_ft_strcpy();
 	test_ft_strcmp();
+	test_ft_strdup();
 	test_ft_write();
 	test_ft_read();
-	test_ft_strdup();
 }
