@@ -11,9 +11,9 @@ _check:
 	jz _exit
 
 _while:
+	movsb
 	cmp byte[rsi], 0
 	jz _exit
-	movsb
 	jmp _while
 
 _exit:
