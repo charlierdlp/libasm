@@ -8,6 +8,7 @@ section .text
 _ft_strdup:
     push rdi
     call _ft_strlen
+    inc rax
     mov rdi, rax
     call _malloc
     cmp rax, 0
