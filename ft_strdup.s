@@ -10,11 +10,15 @@ _ft_strdup:
     call _ft_strlen
     mov rdi, rax
     call _malloc
+    cmp rax, 0
+    jz  _errno
     mov rdi, rax
     pop rsi
     call _ft_strcpy
     ret
 
-_error:
-	mov rax, rdi
-	ret
+_errno:
+    mov r12, 12
+    call ___error
+    mov [rax], r12
+    ret

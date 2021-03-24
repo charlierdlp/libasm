@@ -60,7 +60,6 @@ void	test_ft_strcmp()
 void	test_ft_write()
 {
 	char *text = "Hello world!";
-	int bytes;
 	int fd;
 
 	fd = open("text", O_WRONLY | O_APPEND | O_CREAT, 0700);
@@ -94,16 +93,18 @@ void	test_ft_strdup()
 {
 	char *s1 = "Test1";
 	char *s2 = "Test2";
+	char *tmp1 = ft_strdup(s1);
+	char *tmp2 = ft_strdup(s2);
 
 	printf("\n\033[0;37m*============================*\n");
 	printf("*=========>");
 	printf("\033[0;32m STRDUP \033[0;37m");
 	printf("<=========*\n");
 	printf("*============================*\033[0m\n\n");
-	printf("Original: %s\n", strdup(s1));
-	printf("FT: %s\n", ft_strdup(s2));
-	free(s1);
-	free(s2);
+	printf("Original: %s\n", tmp1);
+	printf("FT: %s\n", tmp2);
+	free(tmp1);
+	free(tmp2);
 	printf("------------------------------\n");
 
 }
