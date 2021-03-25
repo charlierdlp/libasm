@@ -70,6 +70,7 @@ void	test_ft_write(void)
 	printf("*============================*\033[0m\n\n");
 	printf("------------------------------\n");
 	printf("Original: %zd\n", write(fd, text, strlen(text)));
+	printf("FT: %zd\n", ft_write(fd, text, strlen(text)));
 	close(fd);
 }
 
